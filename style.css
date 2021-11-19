@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap");
+
+body {
+  margin-top: 41px;
+  font-family: "Montserrat", sans-serif;
+}
+
+nav {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  border-bottom: solid 1px rgb(206, 206, 206);
+  background-color: white;
+}
+nav > * {
+}
+
+.nav-logo {
+  align-self: center;
+  margin: 8px 12px;
+}
+.nav-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 1.5fr 1fr 2fr;
+  justify-self: center;
+  align-items: center;
+  align-self: center;
+  justify-items: center;
+  height: 40px;
+}
+.nav-list li {
+  font-size: 14px;
+  display: inline;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 10px;
+}
+.nav-mail {
+  justify-self: end;
+  align-self: center;
+  margin: 0px 20px;
+}
+
+.filler {
+  background-color: grey;
+  height: 2000px;
+}
+.top-wrapper {
+  display: grid;
+  justify-content: center;
+}
+.top-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 1150px;
+  margin-top: 130px;
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+
+.top-right {
+  align-self: center;
+  justify-self: end;
+  font-size: 28px;
+}
+.top-left {
+}
+.articles-wrapper {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(5, 120px);
+  grid-gap: 0.5rem;
+}
+.main-wrapper {
+  margin: 0 auto;
+  width: 1500px;
+  justify-content: center;
+}
+.a-article {
+  grid-column: 1/5;
+  grid-row: 1 / span 3;
+  background-color: red;
+}
+.b-article {
+  grid-column: 1 / span 4;
+  grid-row: 4 / span 2;
+  background-color: blue;
+}
+.c-article {
+  background-color: green;
+  grid-column: 5 / span 2;
+  grid-row: span 2;
+}
+.d-article {
+  background-color: rgb(158, 158, 3);
+  grid-column: 7 / span 2;
+  grid-row: span 2;
+}
+.e-article {
+  background-color: sienna;
+  grid-column: 5 / span 4;
+  grid-row: span 3;
+}
+
+.popular-articles {
+  background: rgb(241, 241, 241);
+}
+.popular-articles header {
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 100px;
+  color: rgb(155, 155, 155);
+}
