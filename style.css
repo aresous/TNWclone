@@ -11,12 +11,14 @@ nav {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  border-bottom: solid 1px rgb(206, 206, 206);
   background-color: white;
+  box-shadow: 0px 20px 20px rgb(206, 206, 206, 0.3);
 }
 nav > * {
 }
-
+.hamburger {
+  display: none;
+}
 .nav-logo {
   align-self: center;
   margin: 8px 12px;
@@ -37,6 +39,9 @@ nav > * {
   cursor: pointer;
   padding: 10px;
 }
+.li-partner {
+  width: 180px;
+}
 .nav-mail {
   justify-self: end;
   align-self: center;
@@ -55,6 +60,7 @@ nav > * {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 1150px;
+  min-width: 200px;
   margin-top: 130px;
   justify-content: space-around;
   margin-bottom: 100px;
@@ -67,45 +73,65 @@ nav > * {
 }
 .top-left {
 }
+
+.main-wrapper {
+  margin: 0 auto;
+  max-width: 1500px;
+  justify-content: center;
+}
 .articles-wrapper {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(5, 120px);
   grid-gap: 0.5rem;
 }
-.main-wrapper {
-  margin: 0 auto;
-  width: 1500px;
-  justify-content: center;
-}
 .a-article {
   grid-column: 1/5;
   grid-row: 1 / span 3;
   background-color: red;
+  background: url("https://picsum.photos/746/376");
+  display: grid;
 }
 .b-article {
   grid-column: 1 / span 4;
   grid-row: 4 / span 2;
   background-color: blue;
+  background: url("https://picsum.photos/746/248");
+  display: grid;
 }
 .c-article {
   background-color: green;
   grid-column: 5 / span 2;
   grid-row: span 2;
+  background: url("https://picsum.photos/369/248");
+  display: grid;
 }
 .d-article {
   background-color: rgb(158, 158, 3);
   grid-column: 7 / span 2;
   grid-row: span 2;
+  background: url("https://picsum.photos/369/248");
+  display: grid;
 }
 .e-article {
   background-color: sienna;
   grid-column: 5 / span 4;
   grid-row: span 3;
+  background: url("https://picsum.photos/746/400");
+  display: grid;
+}
+
+/* ============= POPULAR ARTICLES =============== */
+.popular-articles-wrapper {
+  background-color: #f7f8f8;
+  margin-top: 60px;
 }
 
 .popular-articles {
-  background: rgb(241, 241, 241);
+  background: #f7f8f8;
+
+  margin: 0 auto;
+  max-width: 1500px;
 }
 .popular-articles header {
   font-size: 25px;
@@ -113,5 +139,212 @@ nav > * {
   text-transform: uppercase;
   text-align: center;
   padding: 100px;
-  color: rgb(155, 155, 155);
+  color: #a7aab2;
+}
+.popular-articles-items {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding-bottom: 100px;
+  margin-bottom: 100px;
+}
+.popular-item-number {
+  float: left;
+  margin: 0px 15px 200px;
+  font-size: 30px;
+  color: #c09;
+  font-weight: bold;
+}
+.popular-item-title {
+  font-size: 15px;
+  font-weight: bold;
+  word-spacing: 2px;
+  line-height: 24px;
+}
+.popular-item a {
+  color: black;
+  text-decoration: none;
+}
+.popular-item a:hover {
+  text-decoration: underline;
+  text-decoration-color: rgb(204 0 153 / 33%);
+  text-decoration-thickness: 2px;
+}
+
+/*==================LATEST STORIES ==================*/
+
+.latest-stories {
+  margin: 0 auto;
+  max-width: 1216px;
+  margin-bottom: 70px;
+}
+.latest-stories header {
+  color: black;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.latest-stories-items {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.latest-stories-item h1 {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  width: 237px;
+}
+.latest-stories-item h2 {
+  font-size: 14px;
+  color: grey;
+}
+.latest-stories-item-image {
+  width: 280px;
+  height: 157.5px;
+  background: url("https://picsum.photos/280/158");
+  background-color: cyan;
+  margin-bottom: 14px;
+}
+.all-news {
+  margin: 0 auto;
+  text-align: center;
+}
+.all-news-button {
+  border-radius: 20px;
+  padding: 15px 20px;
+  border: solid 1px grey;
+  background-color: white;
+}
+.latest-stories-item a {
+  color: black;
+  text-decoration: none;
+}
+.latest-stories-item a:hover {
+  text-decoration: underline;
+  text-decoration-color: rgb(204 0 153 / 33%);
+  text-decoration-thickness: 2px;
+}
+.article-description {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.article-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+.article-inner-text {
+  align-self: end;
+  color: rgb(255, 255, 255);
+  margin: 20px;
+}
+
+/*========= RESPONSIVE MEDIA =========*/
+@media screen and (max-width: 1150px) {
+  .top-header {
+    width: 770px;
+  }
+}
+@media screen and (max-width: 1197px) {
+  .latest-stories-items {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width: 910px) {
+  .latest-stories-items {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 720px) {
+  .latest-stories-items {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 618px) {
+  .latest-stories-items {
+    grid-template-columns: 1fr;
+    margin: 0 20%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .hamburger {
+    display: inline-block;
+    position: fixed;
+    margin: 6px 0px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .nav-logo {
+    margin: 10px 20px;
+  }
+  .top-header {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100px;
+    min-width: 200px;
+    margin-top: 130px;
+    margin-bottom: 100px;
+  }
+  .top-right {
+    font-size: 20px;
+    align-self: center;
+    justify-self: center;
+  }
+  .popular-articles {
+    background: #f7f8f8;
+
+    margin: 0 auto;
+    width: 400px;
+  }
+  .popular-articles-items {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+  }
+  .popular-item-number {
+    margin: 0px 15px 50px;
+  }
+  .popular-articles header {
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 100px;
+    width: 400px;
+    margin-left: -100px;
+    color: #a7aab2;
+  }
+  .a-article {
+    grid-column: 1 / span 8;
+    grid-row: 1 / span 3;
+    background-color: red;
+    background: url("https://picsum.photos/746/376");
+    display: grid;
+  }
+  .b-article {
+    grid-column: 1 / span 8;
+    grid-row: 4 / span 2;
+    background-color: blue;
+    background: url("https://picsum.photos/746/248");
+    display: grid;
+  }
+  .c-article {
+    display: none;
+  }
+  .d-article {
+    display: none;
+  }
+  .e-article {
+    display: none;
+  }
+  .nav-mail {
+    display: none;
+  }
+  .nav-list {
+    display: none;
+  }
+  .latest-stories {
+  }
 }
