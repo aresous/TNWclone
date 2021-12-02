@@ -207,7 +207,7 @@ nav > * {
   margin-bottom: 14px;
 }
 .all-news {
-  margin: 0 auto;
+  margin: 100px auto;
   text-align: center;
 }
 .all-news-button {
@@ -239,6 +239,21 @@ nav > * {
   margin: 20px;
 }
 
+.newsletter {
+  background: black;
+  background-image: url("./images/spacesbg.png");
+  min-height: 380px;
+
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin-bottom: 400px;
+}
+
 /*========= RESPONSIVE MEDIA =========*/
 @media screen and (max-width: 1150px) {
   .top-header {
@@ -261,9 +276,30 @@ nav > * {
   }
 }
 @media screen and (max-width: 618px) {
+  .latest-stories header {
+    margin-left: 25%;
+  }
   .latest-stories-items {
     grid-template-columns: 1fr;
-    margin: 0 20%;
+    margin: 0 0;
+  }
+  .latest-stories-item {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+  .latest-stories-item h2 {
+    display: inline-block;
+  }
+  .latest-stories-item-image {
+    width: 108px;
+    height: 108px;
+    border-radius: 8px;
+    border-radius: 9999px;
+    margin-left: 30px;
+    margin-right: 20px;
+  }
+  .latest-stories-item h1 {
+    width: 350px;
   }
 }
 @media screen and (max-width: 800px) {
