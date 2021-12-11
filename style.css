@@ -3,6 +3,7 @@
 body {
   margin-top: 41px;
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
 }
 
 nav {
@@ -11,7 +12,7 @@ nav {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  background-color: white;
+  background-color: rgb(245, 245, 245);
   box-shadow: 0px 20px 20px rgb(206, 206, 206, 0.3);
 }
 nav > * {
@@ -39,8 +40,11 @@ nav > * {
   cursor: pointer;
   padding: 10px;
 }
+.nav-list li:hover {
+  background-color: white;
+}
 .li-partner {
-  width: 180px;
+  white-space: nowrap;
 }
 .nav-mail {
   justify-self: end;
@@ -250,13 +254,12 @@ nav > * {
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-repeat: no-repeat;
-  margin-bottom: 400px;
   text-align: center;
 }
 
 .snarky-header {
   padding-top: 100px;
-  font-size: max(22px, 2vw);
+  font-size: max(22px, 3vw);
   color: white;
   font-weight: bold;
 }
@@ -311,7 +314,37 @@ input:focus {
   font-size: 14px;
   font-weight: bold;
 }
-
+/*==========FOOOTER ==============*/
+.footer {
+  color: white;
+  background-color: black;
+  padding-top: 40px;
+}
+.footer-grid-wrapper {
+  display: grid;
+  max-width: 1200px;
+  grid-template-columns: 3fr 1fr 1fr;
+  margin: 0px auto;
+  padding: 20px 40px;
+}
+.footer-section h1 {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+.footer-list li {
+  color: #0cc;
+  margin-bottom: 12px;
+}
+.tnw-media {
+  margin-top: 70px;
+}
+.copyright {
+  color: grey;
+  background-color: black;
+  border-top: 1px solid grey;
+  text-align: center;
+}
 /*========= RESPONSIVE MEDIA =========*/
 @media screen and (max-width: 1150px) {
   .top-header {
@@ -326,6 +359,16 @@ input:focus {
 @media screen and (max-width: 910px) {
   .latest-stories-items {
     grid-template-columns: 1fr 1fr;
+  }
+  .footer-grid-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-logo {
+    grid-column: span 2;
+  }
+  .tnw-media {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
 @media screen and (max-width: 720px) {
