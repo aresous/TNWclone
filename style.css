@@ -356,6 +356,16 @@ input:focus {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+@media screen and (max-width: 1083px) {
+  .subscribe {
+    display: block;
+    margin: auto;
+    width: auto;
+  }
+  .snarky-email {
+    border-radius: 10px 10px 10px 10px;
+  }
+}
 @media screen and (max-width: 910px) {
   .latest-stories-items {
     grid-template-columns: 1fr 1fr;
@@ -400,7 +410,6 @@ input:focus {
     margin-right: 20px;
   }
   .latest-stories-item h1 {
-    width: 350px;
   }
 }
 
@@ -450,8 +459,6 @@ input:focus {
     text-transform: uppercase;
     text-align: center;
     padding: 100px;
-    width: 400px;
-    margin-left: -100px;
     color: #a7aab2;
   }
   .a-article {
